@@ -6,7 +6,7 @@
 /*   By: kaisuzuk <kaisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/17 08:00:35 by kaisuzuk          #+#    #+#             */
-/*   Updated: 2025/12/17 08:03:14 by kaisuzuk         ###   ########.fr       */
+/*   Updated: 2025/12/17 08:10:28 by kaisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,9 @@ class Zombie {
         Zombie(std::string name);
         ~Zombie();
         void announce() const;
-}
+};
+
+Zombie *newZombie(std::string name);
+void randomChump(std::string name);
 
 #endif
