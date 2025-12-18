@@ -6,7 +6,7 @@
 /*   By: kaisuzuk <kaisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 09:35:08 by kaisuzuk          #+#    #+#             */
-/*   Updated: 2025/12/18 10:30:23 by kaisuzuk         ###   ########.fr       */
+/*   Updated: 2025/12/18 10:42:46 by kaisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,7 @@ void Harl::error() {
     std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
 }
 
-void Harl::printDefault() {
-    std::cout << "Probably complaining about insignificant problems" << std::endl;
-}
-
-void Harl::complain(std::string &level) {
+void Harl::complain(const std::string &level) {
     std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
     void (Harl::*funcs[])() = {
         &Harl::debug,
@@ -57,5 +53,4 @@ void Harl::complain(std::string &level) {
             return ;
         }
     }
-    this->printDefault();
 }

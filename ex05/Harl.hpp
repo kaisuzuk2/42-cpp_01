@@ -6,7 +6,7 @@
 /*   By: kaisuzuk <kaisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 09:31:43 by kaisuzuk          #+#    #+#             */
-/*   Updated: 2025/12/18 10:03:06 by kaisuzuk         ###   ########.fr       */
+/*   Updated: 2025/12/18 10:42:54 by kaisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Harl {
     public: 
         Harl();
         ~Harl();
-        void complain(std::string &level);
+        void complain(const std::string &level);
 };
 
 #endif
