@@ -6,7 +6,7 @@
 /*   By: kaisuzuk <kaisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 09:35:08 by kaisuzuk          #+#    #+#             */
-/*   Updated: 2025/12/18 10:38:01 by kaisuzuk         ###   ########.fr       */
+/*   Updated: 2025/12/18 10:56:21 by kaisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,21 +41,31 @@ void Harl::printDefault() {
 
 void Harl::complain(std::string &level) {
     std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-    void (Harl::*funcs[])() = {
-        &Harl::debug,
-        &Harl::info,
-        &Harl::warning,
-        &Harl::error
-    };
-    const size_t size = sizeof(levels) / sizeof(levels[0]); 
-    
-    for (size_t i = 0; i < size; i++)
-    {
+    const size_t size = sizeof(levels) / sizeof(levels[0]);
+    int idx = -1;
+    Harl harl;
+
+    for (size_t i = 0; i < size; i++) {
         if (levels[i] == level)
         {
-            (this->*funcs[i])();
-            return ;
+            idx = i;
+            break;
         }
     }
-    this->printDefault();
+    switch(idx) {
+        case 0:
+            harl.debug();
+            break;
+        case 1:
+            harl.info();
+            break;
+        case 2:
+            harl.warning();
+            break;
+        case 3:
+            harl.error();
+            break;
+        default:
+            harl.printDefault();
+    }
 }

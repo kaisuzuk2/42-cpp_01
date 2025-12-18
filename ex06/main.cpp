@@ -6,7 +6,7 @@
 /*   By: kaisuzuk <kaisuzuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/18 09:52:33 by kaisuzuk          #+#    #+#             */
-/*   Updated: 2025/12/18 10:31:15 by kaisuzuk         ###   ########.fr       */
+/*   Updated: 2025/12/18 10:56:04 by kaisuzuk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void printUsage() {
 }
 
 int main(int argc, char *argv[]) {
-    Harl harl;
     std::string arg;
+    Harl harl;
     
     if (argc != 2)
     {
@@ -29,4 +29,5 @@ int main(int argc, char *argv[]) {
     }
     arg = argv[1];
     harl.complain(arg);
+    
 }
